@@ -1,0 +1,11 @@
+${render("Header")}
+
+Dear ${tutor.contact.firstName}, 
+
+Just a reminder that your class for ${courseClass.course.name} starts on ${courseClass.startDateTime.format("h:mm a EEEE d MMMM yyyy zzzz", courseClass.getTimeZone())} at ${courseClass.displayableLocation}.
+
+You are currently expecting ${courseClass.getSuccessAndQueuedEnrolments().size()} students. This number may change if there are further enrolments.
+
+The class roll and other class information can be accessed at https://skillsoncourse.com.au/portal/login
+
+${render("Footer")}

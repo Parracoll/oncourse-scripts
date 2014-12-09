@@ -1,0 +1,34 @@
+${render("Header")}
+
+o-------------------o
+<% if (invoice.amountOwing.toBigDecimal() > 0) { %>
+     Tax Invoice
+<% } else { %>
+     Credit Note
+<% } %>
+o-------------------o
+
+Invoice created on: ${invoice.createdOn.format("d/M/yy")}
+Invoice due on: ${invoice.dateDue.format("d/M/yy")}
+Invoice number: ${invoice.invoiceNumber}
+<% if (invoice.customerReference) { %>
+Your reference: ${invoice.customerReference}
+<% } %>
+Invoice to: ${invoice.contact.firstName} ${invoice.contact.lastName}
+
+
+Items
+-----
+<% invoice.invoiceLines.each { %>
+${it.title}    ${it.priceTotalIncTax}
+${it.description}
+
+<% } %>
+
+o-------------------o
+Total GST ${invoice.totalIncTax}
+Total Paid ${invoice.totalIncTax.subtract(invoice.amountOwing)}
+Total Owing ${invoice.amountOwing}
+o-------------------o
+
+${render("Footer")}

@@ -1,0 +1,7 @@
+----------------------------
+Email: ${Preferences.get("avetmiss.email")}
+Phone: ${Preferences.get("avetmiss.phone")}
+ABN: ${Preferences.get("college.abn")}
+${Preferences.get("avetmiss.address.line1")}
+${Preferences.get("avetmiss.address.line2")} 
+----------------------------

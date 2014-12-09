@@ -1,0 +1,14 @@
+${render("Header")}
+
+o-------------------o
+     Receipt of Payment
+o-------------------o
+
+Payment type: ${paymentIn.type} 
+Amount: ${paymentIn.amount} 
+Received on: ${paymentIn.createdOn.format("d/M/yy")}
+Paid by: ${paymentIn.contact.firstName} ${paymentIn.contact.lastName}
+
+Thank you for your payment.
+
+${render("Footer")}
