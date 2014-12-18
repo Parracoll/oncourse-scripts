@@ -5,8 +5,11 @@ def run(args) {
 		if (!Money.ZERO.equals(invoice.getTotalIncTax())) {
 			def m = Email.create("Tax Invoice")
 			m.bind(invoice: invoice)
-			m.to(invoice.contact)
-
+			if (invoice.corporatePassUsed) {
+				m.to(invoice.contact, invoice.corporatePassUsed.getEmail())
+			} else {
+				m.to(invoice.contact)	
+			}
 			m.send()
 		}
 		

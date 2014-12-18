@@ -14,7 +14,7 @@ Invoice number: ${invoice.invoiceNumber}
 <% if (invoice.customerReference) { %>
 Your reference: ${invoice.customerReference}
 <% } %>
-Invoice to: ${invoice.contact.firstName} ${invoice.contact.lastName}
+Invoice to: ${invoice.contact.fullName} 
 
 
 Items

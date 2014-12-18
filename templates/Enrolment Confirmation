@@ -1,6 +1,6 @@
 ${render("Header")} 
 
-Dear ${enrolment.student.contact.firstName} ${enrolment.student.contact.lastName},
+Dear ${enrolment.student.contact.fullName},
 
 Thank you for enrolling at ${Preferences.get("college.name")}.
 

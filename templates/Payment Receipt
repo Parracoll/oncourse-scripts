@@ -7,7 +7,7 @@ o-------------------o
 Payment type: ${paymentIn.type} 
 Amount: ${paymentIn.amount} 
 Received on: ${paymentIn.createdOn.format("d/M/yy")}
-Paid by: ${paymentIn.contact.firstName} ${paymentIn.contact.lastName}
+Paid by: ${paymentIn.contact.fullName}
 
 Thank you for your payment.
 

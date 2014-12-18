@@ -1,6 +1,6 @@
 ${render("Header")}
 
-Dear ${enrolment.student.contact.firstName} ${enrolment.student.contact.lastName},
+Dear ${enrolment.student.contact.fullName},
 
 To be issued any formal certification on the completion of ${enrolment.courseClass.course.name}, you must provide ${Preferences.get("college.name")} with your Unique Student Identifier (USI).
 
