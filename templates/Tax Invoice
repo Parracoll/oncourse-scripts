@@ -1,10 +1,10 @@
 ${render("Header")}
 
 o-------------------o
-<% if (invoice.amountOwing.toBigDecimal() > 0) { %>
-     Tax Invoice
-<% } else { %>
+<% if (invoice.getTotalIncTax().toBigDecimal() < 0) { %>
      Credit Note
+<% } else { %>
+     Tax Invoice
 <% } %>
 o-------------------o
 
